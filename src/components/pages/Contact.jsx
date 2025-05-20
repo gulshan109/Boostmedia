@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { MdOutlineEmail } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
 
 const Contact = () => {
   const [name , setName] = useState("");
@@ -8,9 +11,9 @@ const Contact = () => {
   const [message , setMessage] = useState("");
 
 
-  const phoneNumber = "+918053454547"; // Your phone number
-  const email1 = "bgulshan109@gmail.com"; // Your email
-  const whatsappNumber = "+918053454547"; // Your WhatsApp number
+  const phoneNumber = "+918740870454"; // Your phone number
+  const email1 = "sachin11097@gmail.com"; // Your email
+  const whatsappNumber = "+918740870454"; // Your WhatsApp number
   const message1 = "Hello, I need help with BoostMedia";
 
   const handleSubmit = async (e) => {
@@ -41,7 +44,7 @@ const Contact = () => {
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <a href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message1)}`} target="_blank" rel="noopener noreferrer">
               <button className="flex items-center justify-center bg-green-500 text-white p-4 rounded-full w-16 h-16">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-8 h-8" />
+                <FaWhatsapp className="w-8 h-8" />
               </button>
               <h3 className="mt-4 text-lg font-semibold text-gray-800 dark:text-white">Chat on WhatsApp</h3>
             </a>
@@ -51,7 +54,7 @@ const Contact = () => {
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <a href={`mailto:${email1}`} target="_blank" rel="noopener noreferrer">
               <button className="flex items-center justify-center bg-blue-500 text-white p-4 rounded-full w-16 h-16">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Email_Icon.svg" alt="Email" className="w-8 h-8" />
+                <MdOutlineEmail className="w-8 h-8" />
               </button>
               <h3 className="mt-4 text-lg font-semibold text-gray-800 dark:text-white">Email Us</h3>
             </a>
@@ -61,7 +64,7 @@ const Contact = () => {
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <a href={`tel:${phoneNumber}`} target="_blank" rel="noopener noreferrer">
               <button className="flex items-center justify-center bg-yellow-500 text-white p-4 rounded-full w-16 h-16">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Phone_icon.png" alt="Phone" className="w-8 h-8" />
+                <MdOutlinePhoneInTalk className="w-8 h-8" />
               </button>
               <h3 className="mt-4 text-lg font-semibold text-gray-800 dark:text-white">Call Us</h3>
             </a>
@@ -69,7 +72,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-
+{/* 
   <div className="max-w-3xl mx-auto" data-aos="fade-up">
     <h2 className="text-4xl font-bold text-blue-600 mb-6 text-center">Contact Us</h2>
     <form className="space-y-2 w-[90%]" onSubmit={handleSubmit} >
@@ -103,10 +106,9 @@ const Contact = () => {
         
       >
         Send Message 
-        {/* <span>+918740870454</span> */}
       </button>
     </form>
-  </div>
+  </div> */}
 </section>
 
   );
